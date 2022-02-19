@@ -1,4 +1,4 @@
---uc-1 creating database
+--uc-1 Creating database
 create database AddressBookServices;
 
 --uc-2 Creating table
@@ -13,15 +13,15 @@ PhoneNumber BigInt,
 Email varchar(200)
 )
 
---UC-3 inserting values to the table
+--UC-3 Inserting values to the table
 Insert into Address_Book_Table(FirstName,LastName,Address,City,State,zip,PhoneNumber,Email) 
 values('Sukalyan','Dash','Salapada By Pass','Anandapur','Odisha',758020,8917361920,'sukalyandash1920@gmail.com'),
 ('Rasmita','Pati','Mugpal','Jajpur','Odisha',755009,7788987513,'rasmitapati966@gmail.com'),
-('Rakshi','Mohapatra','JajpurRoad','Jajpur','Odisha',755008,9348291792,'gourishete@gmail.com');
+('Rakshi','Mohapatra','JajpurRoad','Jajpur','Odisha',755008,9348291792,'rakshi93@gmail.com');
 
 select *from Address_Book_Table;
 
---Uc-4 edititng contact using name
+--Uc-4 Edititng contact using name
 Update Address_Book_Table
 set Email='rasmitapati778@gmail.com'
 where FirstName='Rasmita'
@@ -46,7 +46,7 @@ select Count(*),state,City
 from Address_Book_Table
 Group by state,City
 
-----uc-8 ability to sort by person name bycity---
+----uc-8 Ability to sort by person name bycity---
 select *from Address_Book_Table
 where City='JajpurRoad'
 order by FirstName,LastName;
@@ -57,17 +57,17 @@ add AddressBookName varchar(100),
 Type varchar(100)
 
 
---update vaalues for craeted book name and type column---
+--Update values for craeted book name and type column---
 update Address_Book_Table
 set AddressBookName='PrabhasFans',Type='Fan_group'
 where FirstName='Rakshi' or FirstName='Rasmita'
 
---update vaalues for craeted book name and type column---
+--Update vaalues for craeted book name and type column---
 update Address_Book_Table
 set AddressBookName='Dash&Pati',Type='Family'
 where FirstName='Papuni'
 
---update vaalues for craeted book name and type column---
+--Update vaalues for craeted book name and type column---
 update Address_Book_Table
 set AddressBookName='PriyadarshiniMohapatra',Type='Dears'
 where FirstName='Rakshi'
@@ -130,11 +130,11 @@ addressBookName varchar(50) not null );
 insert into AddressBooknames values ('S'),('P'),('H');
 select * from AddressBookNames;
 
----creating table address book names mapper which will contain contact id and address book names id---
-create table addressbookMappeing
+---Creating table address book names mapper which will contain contact id and address book names id---
+create table addressbookMapping
 (contactid int not null, addressbookid int not null);
 --inserting data into address book mapper id
-insert into addressbookMappeing
+insert into addressbookMapping
 values
 (1,1),(2,1),(3,2);
 
