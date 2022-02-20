@@ -18,3 +18,5 @@ Insert into Address_Book_Table(FirstName,LastName,Address,City,State,zip,PhoneNu
 values('Sukalyan','Dash','Salapada By Pass','Anandapur','Odisha',758020,8917361920,'sukalyandash1920@gmail.com'),
 ('Rasmita','Pati','Mugpal','Jajpur','Odisha',755009,7788987513,'rasmitapati966@gmail.com'),
 ('Rakshi','Mohapatra','JajpurRoad','Jajpur','Odisha',755008,9348291792,'rakshi93@gmail.com');
+
+select *from Address_Book_Table;
